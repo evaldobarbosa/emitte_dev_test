@@ -1,0 +1,202 @@
+_type: export
+__export_format: 4
+__export_date: 2023-05-17T05:05:42.129Z
+__export_source: insomnia.desktop.app:v2022.7.5
+resources:
+  - _id: req_2c2a3ca2a9274abdadc7643b4e032c15
+    parentId: wrk_d2f2c91d617f40028fb84f830e16e138
+    modified: 1684298323823
+    created: 1684297922340
+    url: http://localhost:8000/nfs/nfe
+    name: Cadastrar uma nota
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"cnpj": "11111111000101", 
+        	"numero": "000010",
+        	"valor": 150,
+        	"itens": [
+        		{
+        			"produto": "Produto item 1",
+        			"quantidade": 2,
+        			"valor": 50
+        		},
+        		{
+        			"produto": "Produto item 2",
+        			"quantidade": 1,
+        			"valor": 30
+        		},
+        		{
+        			"produto": "Produto item 3",
+        			"quantidade": 1,
+        			"valor": 20
+        		}
+        	]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684297922340
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_d2f2c91d617f40028fb84f830e16e138
+    parentId: null
+    modified: 1684297918054
+    created: 1684297918054
+    name: Teste técnico
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_d68ab5b2638541848d9559dd11a57797
+    parentId: wrk_d2f2c91d617f40028fb84f830e16e138
+    modified: 1684298432527
+    created: 1684298425500
+    url: http://localhost:8000/nfs/xyz
+    name: Tentativa errada de cadastrar uma nota
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"cnpj": "11111111000101", 
+        	"numero": "000010",
+        	"valor": 150,
+        	"itens": [
+        		{
+        			"produto": "Produto item 1",
+        			"quantidade": 2,
+        			"valor": 50
+        		},
+        		{
+        			"produto": "Produto item 2",
+        			"quantidade": 1,
+        			"valor": 30
+        		},
+        		{
+        			"produto": "Produto item 3",
+        			"quantidade": 1,
+        			"valor": 20
+        		}
+        	]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684282656526
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b907f95f6eba4e6b8a3c2a231da01357
+    parentId: wrk_d2f2c91d617f40028fb84f830e16e138
+    modified: 1684299888247
+    created: 1684298870579
+    url: http://localhost:8000/processamento/nfs
+    name: Atualização de dados de NF
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"notas_fiscais": [
+        		{
+        			"cnpj": "11111111000101",
+        			"numero": "000010",
+        			"data_processamento": "2023-05-17 01:58"
+        		},
+        		{
+        			"cnpj": "11111111000101",
+        			"numero": "000011",
+        			"data_processamento": "2023-05-17 01:59:01"
+        		}
+        	]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_9553451582904e2496673d9b47b0a670
+      - id: pair_5619c6f0d666475da3f5870aff04d62e
+        name: Accept
+        value: application/json
+        description: ""
+    authentication: {}
+    metaSortKey: -1684275023619
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_da6c89377baa60e7c49ceaeaae6a09277a816c81
+    parentId: wrk_d2f2c91d617f40028fb84f830e16e138
+    modified: 1684297918061
+    created: 1684297918061
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1684297918062
+    _type: environment
+  - _id: jar_da6c89377baa60e7c49ceaeaae6a09277a816c81
+    parentId: wrk_d2f2c91d617f40028fb84f830e16e138
+    modified: 1684299889307
+    created: 1684297918063
+    name: Default Jar
+    cookies:
+      - key: laravel_session
+        value: eyJpdiI6Ik1YS3hlKytSdDhLSlNQR2lZNXBDR0E9PSIsInZhbHVlIjoiRzVmODVZOEN4bWtDSVM3ZUZVVEw0L3pQTUhKUG94cFZUNkpzSDJCYWp5cGNQRXhYZHJpeXhUckZhTW5yakdabWhmZllDMlloWitFekhqbUhVVEpkQm1ERkMvYW8vY0xnaFF3LzNDT1BtYk9oV1FMeWt1bi9lU2pNTGFwUXJhV2QiLCJtYWMiOiIzMDdlYTVjNjVjMjQxNjI1YjM4OWNiMDExNGQyYTI0NDZmYjM1OThhYjAwNmNkYjMyMjhlYmQwMDJjZWZjNTE0IiwidGFnIjoiIn0%3D
+        expires: 2023-05-17T07:04:49.000Z
+        maxAge: 7200
+        domain: localhost
+        path: /
+        httpOnly: true
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2023-05-17T04:39:04.273Z
+        lastAccessed: 2023-05-17T05:04:49.306Z
+        id: "5786037351681785"
+      - key: XSRF-TOKEN
+        value: eyJpdiI6Ik9LejVQWVVqT2lpbXFXQjJ2SHNHQ3c9PSIsInZhbHVlIjoiT2RaU1dOTlJTb29QOGpoZmI1UjRhb0owMm9oQUx0SEJVdUdwR2JyQTJSVlEzMEJqTUYzY2ZNYzRqZlB4WGtXRldPbU5VWkQyTWk2ZFlUQnBZRlFZbXpZelE4Mm50VUdzME84dWNVV2pySUlsandpN1g0UVV5RGI4YlJ2bjBaODciLCJtYWMiOiI2YWI5MDNlOTFiNWMxZTUwNTgyMTMwYjAwMWFiNjQ4OWM4OGE2ZDFiN2NmZGY0MWU5ZjMzMzIzZWMzNzg0NWIyIiwidGFnIjoiIn0%3D
+        expires: 2023-05-17T07:04:49.000Z
+        maxAge: 7200
+        domain: localhost
+        path: /
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2023-05-17T04:40:04.551Z
+        lastAccessed: 2023-05-17T05:04:49.306Z
+        id: "5888227980599903"
+    _type: cookie_jar
+  - _id: spc_ca5977efa5a14a7a8feca5626f1cee2a
+    parentId: wrk_d2f2c91d617f40028fb84f830e16e138
+    modified: 1684297918055
+    created: 1684297918055
+    fileName: Teste técnico
+    contents: ""
+    contentType: yaml
+    _type: api_spec

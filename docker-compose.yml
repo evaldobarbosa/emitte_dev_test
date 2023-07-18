@@ -1,0 +1,87 @@
+version: "3.7"
+
+services:
+  api:
+    image: ambientum/php:8.1-nginx
+    container_name: emitte_api
+    restart: unless-stopped
+    # comment next block if you are not using reverse proxy on local
+    ports:
+      - 9080:8080
+    volumes:
+      - .:/var/www/app
+    environment:
+      - FRAMEWORK=laravel
+      - XDEBUG_ENABLED=false
+      - OPCACHE_MODE=normal
+      - PHP_MEMORY_LIMIT=256M
+      - LANG=pt_BR.UTF-8
+      - TZ=America/Fortaleza
+      - APP_ENV=local
+      - DB_CONNECTION=pgsql
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_DATABASE=emitte
+      - DB_USERNAME=emitte
+      - DB_PASSWORD=emitte
+    depends_on:
+      - db
+    links:
+      - db
+      # - mailhog
+    networks:
+      emitte_net:
+        aliases:
+          - fake.geradornf.test
+
+  front:
+    image: node:latest
+    container_name: emitte_front
+    restart: unless-stopped
+    # comment next block if you are not using reverse proxy on local
+    ports:
+      - 8090:8080
+    volumes:
+      - .:/var/www/app
+    depends_on:
+      - api
+
+  db:
+    image: postgres:latest
+    container_name: emitte_db
+    restart: unless-stopped
+    # volumes:
+      # - ./pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=emitte
+      - POSTGRES_PASSWORD=emitte
+      - POSTGRES_DB=emitte
+      # - PGDATA=./pgdata
+      - TZ=America/Fortaleza
+    networks:
+      - emitte_net
+
+  # queue:
+  #   image: ambientum/php:8.0-nginx
+  #   restart: unless-stopped
+  #   command: php artisan queue:work --tries=5 --sleep=5
+  #   environment:
+  #     - PHP_MEMORY_LIMIT=256M
+  #     - LANG=pt_BR.UTF-8
+  #     - TZ=America/Fortaleza
+  #   volumes:
+  #     - ./:/var/www/app
+  #   depends_on:
+  #     - web
+  #   links:
+  #     - db
+
+  # mailhog:  # MailHog - Fake SMTP server (optional).
+  #   image: mailhog/mailhog:latest
+  #   ports:
+  #     - '1026:1025'  # Port 1025 => SMTP.
+  #     - '8026:8025'  # Port 8025 => Web dashboard (http://127.0.0.1:8025).
+
+networks:
+  emitte_net:
+    driver: bridge
