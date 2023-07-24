@@ -12,7 +12,7 @@ Para enviar o arquivo, faça uma tela onde o cliente possa selecionar o arquivo 
 
 Você deve guardar os dados de todas as notas processadas na nossa base de dados utilizando o endpoint fake.geradornf.test/processamento/nfs informando os dados de cada nota fiscal (cnpj, número e tipo da nota) e o cliente deve ser notificado com o total de notas processadas do arquivo.
 
-Para mais informaçõe sobre os endpoints, veja o arquivo API.md.
+Para mais informações sobre os endpoints, veja o arquivo API.md.
 
 > IMPORTANTE: O escopo deste teste é totalmente fictício e não iremos utilizar o seu código para economizar o nosso trabalho.
 
@@ -24,6 +24,14 @@ Para mais informaçõe sobre os endpoints, veja o arquivo API.md.
 - O arquivo deve ser guardado para conferência posterior;
 - Você deve guardar informações sobre o processamento de cada item;
 - Documente a máximo que puder a sua solução.
+
+## Instruções para a parte do Frontend
+
+A aplicação frontend deve ser desenvolvida na pasta `src`, que se encontra dentro da pasta `web`. O projeto frontend, baseado em React, já possui as configurações iniciais para desenvolvimento com Vite, ESLint, Prettier e Typescript.
+
+Quanto à estilização, você tem total liberdade. Pode-se utilizar qualquer biblioteca de componentes, como Chakra-UI, Material-UI, Styled-Components, entre outras, ou até mesmo CSS puro.
+
+Segue o link para o  [Figma](https://www.figma.com/file/Dx9V3dLGvKDa0euP7rA299/Teste-Emitte?type=design&node-id=0%3A1&mode=design&t=fp4FgS7KjEiU0hVN-1), onde você encontrará o layout da aplicação.
 
 ## Quanto tempo você tem para desenvolver a solução
 
@@ -52,9 +60,9 @@ php artisan key:generate
 composer renew
 ```
 
-Agora adicione o host ```fake.geradornf.test``` necessário na sua máquina. Se você usa linux, ele deve ser adicionado no final do arquivo /etc/hosts.
+Agora adicione o host `fake.geradornf.test` necessário na sua máquina. Se você usa linux, ele deve ser adicionado no final do arquivo /etc/hosts.
 
-Você poderá utilizar o usuário emitte@emitte.com.br com a senha emitte2023 para fazer login na sua aplicação e processar o arquivo. 
+Você poderá utilizar o usuário emitte@emitte.com.br com a senha emitte2023 para fazer login na sua aplicação e processar o arquivo.
 
 Você vai trabalhar com Laravel e Postgres neste teste.
 
