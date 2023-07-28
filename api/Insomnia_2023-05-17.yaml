@@ -7,7 +7,7 @@ resources:
     parentId: wrk_d2f2c91d617f40028fb84f830e16e138
     modified: 1684298323823
     created: 1684297922340
-    url: http://localhost:8000/nfs/nfe
+    url: http://nf.processador.test:9080/nfs/nfe
     name: Cadastrar uma nota
     description: ""
     method: POST
@@ -62,7 +62,7 @@ resources:
     parentId: wrk_d2f2c91d617f40028fb84f830e16e138
     modified: 1684298432527
     created: 1684298425500
-    url: http://localhost:8000/nfs/xyz
+    url: http://nf.processador.test:9080/nfs/xyz
     name: Tentativa errada de cadastrar uma nota
     description: ""
     method: POST
@@ -109,7 +109,7 @@ resources:
     parentId: wrk_d2f2c91d617f40028fb84f830e16e138
     modified: 1684299888247
     created: 1684298870579
-    url: http://localhost:8000/processamento/nfs
+    url: http://nf.processador.test:9080/processamento/nfs
     name: Atualização de dados de NF
     description: ""
     method: POST
@@ -170,7 +170,7 @@ resources:
         value: eyJpdiI6Ik1YS3hlKytSdDhLSlNQR2lZNXBDR0E9PSIsInZhbHVlIjoiRzVmODVZOEN4bWtDSVM3ZUZVVEw0L3pQTUhKUG94cFZUNkpzSDJCYWp5cGNQRXhYZHJpeXhUckZhTW5yakdabWhmZllDMlloWitFekhqbUhVVEpkQm1ERkMvYW8vY0xnaFF3LzNDT1BtYk9oV1FMeWt1bi9lU2pNTGFwUXJhV2QiLCJtYWMiOiIzMDdlYTVjNjVjMjQxNjI1YjM4OWNiMDExNGQyYTI0NDZmYjM1OThhYjAwNmNkYjMyMjhlYmQwMDJjZWZjNTE0IiwidGFnIjoiIn0%3D
         expires: 2023-05-17T07:04:49.000Z
         maxAge: 7200
-        domain: localhost
+        domain: nf.processador.test
         path: /
         httpOnly: true
         extensions:
@@ -183,7 +183,7 @@ resources:
         value: eyJpdiI6Ik9LejVQWVVqT2lpbXFXQjJ2SHNHQ3c9PSIsInZhbHVlIjoiT2RaU1dOTlJTb29QOGpoZmI1UjRhb0owMm9oQUx0SEJVdUdwR2JyQTJSVlEzMEJqTUYzY2ZNYzRqZlB4WGtXRldPbU5VWkQyTWk2ZFlUQnBZRlFZbXpZelE4Mm50VUdzME84dWNVV2pySUlsandpN1g0UVV5RGI4YlJ2bjBaODciLCJtYWMiOiI2YWI5MDNlOTFiNWMxZTUwNTgyMTMwYjAwMWFiNjQ4OWM4OGE2ZDFiN2NmZGY0MWU5ZjMzMzIzZWMzNzg0NWIyIiwidGFnIjoiIn0%3D
         expires: 2023-05-17T07:04:49.000Z
         maxAge: 7200
-        domain: localhost
+        domain: nf.processador.test
         path: /
         extensions:
           - samesite=lax

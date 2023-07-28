@@ -9,7 +9,7 @@ services:
     ports:
       - 9080:8080
     volumes:
-      - .:/var/www/app
+      - ./api:/var/www/app
     environment:
       - FRAMEWORK=laravel
       - XDEBUG_ENABLED=false

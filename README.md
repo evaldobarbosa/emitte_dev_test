@@ -12,7 +12,7 @@ Para enviar o arquivo, faça uma tela onde o cliente possa selecionar o arquivo 
 
 Você deve guardar os dados de todas as notas processadas na nossa base de dados utilizando o endpoint fake.geradornf.test/processamento/nfs informando os dados de cada nota fiscal (cnpj, número e tipo da nota) e o cliente deve ser notificado com o total de notas processadas do arquivo.
 
-Para mais informações sobre os endpoints, veja o arquivo API.md.
+Para mais informações sobre os endpoints, veja o arquivo [api/APIs.md](api/APIs.md). Utilize o arquivo nf.csv para o seu teste.
 
 > IMPORTANTE: O escopo deste teste é totalmente fictício e não iremos utilizar o seu código para economizar o nosso trabalho.
 
@@ -23,7 +23,7 @@ Para mais informações sobre os endpoints, veja o arquivo API.md.
 - O usuário que tem acesso a essa funcionalidade deve estar logado e só vai poder processar arquivos com notas do cnpj da empresa à qual está vinculado;
 - O arquivo deve ser guardado para conferência posterior;
 - Você deve guardar informações sobre o processamento de cada item;
-- Documente a máximo que puder a sua solução.
+- Documente ao máximo que puder a sua solução.
 
 ## Instruções para a parte do Frontend
 
@@ -31,11 +31,11 @@ A aplicação frontend deve ser desenvolvida na pasta `src`, que se encontra den
 
 Quanto à estilização, você tem total liberdade. Pode-se utilizar qualquer biblioteca de componentes, como Chakra-UI, Material-UI, Styled-Components, entre outras, ou até mesmo CSS puro.
 
-Segue o link para o  [Figma](https://www.figma.com/file/Dx9V3dLGvKDa0euP7rA299/Teste-Emitte?type=design&node-id=0%3A1&mode=design&t=fp4FgS7KjEiU0hVN-1), onde você encontrará o layout da aplicação.
+Segue o link para o  [Figma](https://www.figma.com/file/Dx9V3dLGvKDa0euP7rA299/Teste-Emitte?type=design&node-id=0%3A1&mode=design&t=fp4FgS7KjEiU0hVN-1), onde você encontrará o layout da aplicação. Siga o ao máximo.
 
 ## Quanto tempo você tem para desenvolver a solução
 
-Você tem o prazo de 2 dias para implementar essa funcionalidade. Quando terminar, faça um Pull Request para este repositório.
+Você tem o prazo de 3 dias para implementar essa funcionalidade. Quando terminar, faça um Pull Request para este repositório.
 
 ## O que eu devo fazer para iniciar esta aplicação
 
@@ -60,11 +60,19 @@ php artisan key:generate
 composer renew
 ```
 
-Agora adicione o host `fake.geradornf.test` necessário na sua máquina. Se você usa linux, ele deve ser adicionado no final do arquivo /etc/hosts.
+Agora adicione o host `fake.geradornf.test` necessário na sua máquina. Se você usa linux, ele deve ser adicionado no final do arquivo /etc/hosts. Adicione também o nf.processador.test ao seu /etc/hosts.
+
+Você pode adicionar uma linha assim no seu arquivo:
+
+```
+127.0.0.1   fake.geradornf.test nf.processador.test
+```
 
 Você poderá utilizar o usuário emitte@emitte.com.br com a senha emitte2023 para fazer login na sua aplicação e processar o arquivo.
 
 Você vai trabalhar com Laravel e Postgres neste teste.
+
+Você encontrará um arquivo com uma coleção básica de requisições para o
 
 ## Ficamos felizes com o seu interesse
 
