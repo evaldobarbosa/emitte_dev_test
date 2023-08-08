@@ -55,9 +55,9 @@ Você deve fazer um fork deste repositório, baixá-lo na sua máquina e rodar n
 
 ```
 docker-compose up -d
-docker-compose exec php_teste_emitte composer install
-docker-compose exec php_teste_emitte php artisan key:generate
-docker-compose exec php_teste_emitte composer renew
+docker exec -it emitte_api composer install
+docker exec -it emitte_api php artisan key:generate
+docker exec -it emitte_api composer renew
 ```
 
 ### Se você ainda não usa docker
@@ -80,7 +80,7 @@ Você pode adicionar uma linha assim no seu arquivo:
 
 Você poderá utilizar o usuário emitte@emitte.com.br com a senha emitte2023 para fazer login na sua aplicação e processar o arquivo.
 
-Você vai trabalhar com Laravel e Postgres neste teste.
+Você vai trabalhar com Laravel e um servidor de banco de dados neste teste.
 
 Você encontrará um arquivo com uma coleção básica de requisições para o
 
