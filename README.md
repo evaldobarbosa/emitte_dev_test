@@ -35,7 +35,17 @@ Segue o link para o  [Figma](https://www.figma.com/file/Dx9V3dLGvKDa0euP7rA299/T
 
 ## Quanto tempo você tem para desenvolver a solução
 
-Você tem o prazo de 3 dias para implementar essa funcionalidade. Quando terminar, faça um Pull Request para este repositório.
+Você tem o prazo de 5 dias para implementar essa funcionalidade.
+
+### Contando o tempo
+
+Faça um fork deste repositório para iniciar seu teste, quando terminar, faça um Pull Request para este repositório.
+
+### O tempo apertou e ainda não consegui
+
+Iniciou? Termina. Não deixa de terminar não! Queremos ver o seu PR!
+
+Quanto ao tempo apertado, entra em contato com a gente pra avisar... estamos muito interessados em ver como você resolve os problemas. É claro que a melhor solução no menor tempo é o que todo mundo quer, a gente também vai ficar feliz de ver isso.
 
 ## O que eu devo fazer para iniciar esta aplicação
 
