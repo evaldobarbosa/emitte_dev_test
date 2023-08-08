@@ -55,6 +55,7 @@ Você deve fazer um fork deste repositório, baixá-lo na sua máquina e rodar n
 
 ```
 docker-compose up -d
+cp api/.env.example api/.env
 docker exec -it emitte_api composer install
 docker exec -it emitte_api php artisan key:generate
 docker exec -it emitte_api composer renew
