@@ -53,7 +53,7 @@ return new class extends Migration
 
             $table->json('informacoes')->default('{}');
 
-            $table->foreignId('nota_fiscal_id')->constrained();
+            $table->foreignId('nota_fiscal_id')->constrained('notas_fiscais');
             
             $table->timestamps();
         });
@@ -68,6 +68,5 @@ return new class extends Migration
         Schema::dropIfExists('notas_fiscais');
         Schema::dropIfExists('empresa_usuarios');
         Schema::dropIfExists('empresas');
-
     }
 };

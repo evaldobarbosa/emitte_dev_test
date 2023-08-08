@@ -35,14 +35,20 @@ services:
           - fake.geradornf.test
 
   front:
-    image: node:latest
+    # image: node:latest
+    build:
+      context: .
+      dockerfile: web/Dockerfile
     container_name: emitte_front
     restart: unless-stopped
+    working_dir: /home/node/app
+    # command: npm run dev
     # comment next block if you are not using reverse proxy on local
     ports:
-      - 8090:8080
+      - 3000:3000
+      - 5173:5173
     volumes:
-      - .:/var/www/app
+      - ./web:/home/node/app
     depends_on:
       - api
 
